@@ -1,0 +1,33 @@
+{
+  "name": "node_agenda_tels",
+  "version": "1.0.0",
+  "description": "Agenda básica de teléfonos",
+  "main": "app.js",
+  "type":"module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/classesdeferran/agenda_telefons_2.git"
+  },
+  "keywords": [
+    "Node",
+    "Express",
+    "Ejs",
+    "MySQL",
+    "Agenda"
+  ],
+  "author": "Ferran",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/classesdeferran/agenda_telefons_2/issues"
+  },
+  "homepage": "https://github.com/classesdeferran/agenda_telefons_2#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "mysql": "^2.18.1"
+  }
+}
