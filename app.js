@@ -5,9 +5,14 @@ import express from 'express';
 
 import router from './router.js'
 
+
+
 const app = express();
 
 const PORT = process.env.PORT || 3000
+
+// Determinar motor de plantillas
+app.set('view engine', 'ejs')
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
