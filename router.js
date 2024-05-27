@@ -8,7 +8,12 @@ router.get('/', (req, res) => {
 });
 
 router.get('/formulario', (req, res) => {
-    
+    res.send('Seré dinámico algún día...')
+})
+
+router.post('/insert', (req, res) => {
+    console.log(req.body); 
+    // res.send('Seré dinámico algún día...')
 })
 
 
