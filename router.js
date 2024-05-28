@@ -14,16 +14,15 @@ const connection = mysql.createConnection(configConnection);
 const router = express.Router();
 
 router.get("/", (req, res) => {
-    const select = "SELECT * FROM agenda"
-    connection.query(select, (err, result, fields) => {
-      if (err) throw err;
-      res.render("index", {title: "Mis contactos", contactos: result});
-    })
-
+  const select = "SELECT * FROM agenda";
+  connection.query(select, (err, result, fields) => {
+    if (err) throw err;
+    res.render("index", { title: "Mis contactos", contactos: result });
+  });
 });
 
 router.get("/formulario", (req, res) => {
-  res.send("Seré dinámico algún día...");
+  res.render("formulario", { title: "Formulario" });
 });
 
 router.post("/insert", (req, res) => {
@@ -34,6 +33,19 @@ router.post("/insert", (req, res) => {
     res.redirect("/");
   });
   // res.send('Seré dinámico algún día...')
+});
+
+router.get("/borrar/:id", (req, res) => {
+  const { id } = req.params;
+  const deleteRow = `DELETE FROM agenda WHERE id = ${id}`;
+  connection.query(deleteRow, (err, result, fields) => {
+    if (err) throw err;
+    res.redirect("/");
+  });
+});
+
+router.get("/editar/:id/:nombre/:apellido/:telefono/:tipo", (req, res) => {
+  console.log(req.params);
 });
 
 // Exportación con 'type': 'modules'

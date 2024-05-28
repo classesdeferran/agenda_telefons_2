@@ -21,7 +21,7 @@
     <header class="container text-center">
       <h1>Mi agenda</h1>
       <a
-        href="formulario.html"
+        href="formulario"
         class="btn btn-primary"
         role="button"
         aria-disabled="false"
@@ -36,6 +36,8 @@
             <th>Apellido</th>
             <th>Teléfono</th>
             <th>Tipo</th>
+            <th></th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
@@ -46,6 +48,8 @@
             <td><%= contacto.apellido %></td>
             <td><%= contacto.telefono %></td>
             <td><%= contacto.tipo %></td>
+            <td><a href="editar/<%= contacto.id %>/<%= contacto.nombre %>/<%= contacto.apellido %>/<%= contacto.telefono %>/<%= contacto.tipo %>">✏️</a> </td>
+            <td><a href="borrar/<%= contacto.id %>">🗑️</a> </td>
           </tr>
           <% }) %>
         
